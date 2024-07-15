@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }   
+
+        .out_border {
+            /* outline: 100px  solid blue; */
+            height: 617px;
+            width: 1425px;
+            background-color: rgba(254, 254, 254, 255);
+            border: 55px solid rgba(241, 239, 233, 255);
+            /* margin-top: 50px; */
+            /* outline-color:blue; */
+        }
+
+        .inner_last {
+            width: 250.5px;
+            height: 350px;
+            /* border: 2px solid black; */
+            background-color: rgba(218, 212, 190, 255);
+            float: right;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            opacity: 0.6;
+        }
+
+        .inner_middle {
+            /* height: 500px; */
+            /* width: 500px; */
+            background-color: rgba(234, 230, 215, 255);
+            width: 983px;
+            height: 299px;
+            border-bottom-left-radius: 100px;
+            /* border: 2px solid black; */
+            /* background-color: blue; */
+            /* float: right; */
+            /* position: absolute; */
+            /* right: 0px; */
+            /* top: 0px; */
+            /* opacity: 0.6; */
+            margin-left: 250px;
+            /* display: inline-block; */
+
+
+
+        }
+
+        .inner_right {
+            height: 420px;
+            width: 247px;
+            /* background-color: red; */
+            /* display: inline-block; */
+            position: absolute;
+            /* border: 5px solid grey; */
+            opacity: 0.9;
+        }
+
+        .inner-last1 {
+            height: 199px;
+            width: 1000;
+            background-color: rgba(254, 254, 254, 255);
+            margin-top: 121px;
+
+        }
+
+        .inner-last1 img {
+            height: 150px;
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-between; */
+            /* padding: 50px; */
+
+        }
+
+        .inner_book {
+            width: 249.5px;
+            margin-left: 10px;
+
+        }
+
+        .category_book img {
+            padding-left: 175px;
+            padding-top: 20px;
+        }
+
+        .inner_bookcategory {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            /* padding-left: 150px; */
+            margin-left: 233px;
+        }
+
+        .inner_bookcategory p {
+            padding-left: 210px;
+            /* margin-left: 50px; */
+        }
+
+        .inner_heading {
+            position: relative;
+            top: 40px;
+            left: 100px;
+        }
+
+        .inner_select {
+            position: relative;
+            top: 53px;
+            left: 100px;
+            /* padding-left: 30px; */
+        }
+
+        .inner_select select {
+            width: 150px;
+            height: 25px;
+        }
+
+        .inner_select input {
+            height: 25px;
+            width: 300px;
+            margin-left: 40px;
+            border-radius: 10px;
+        }
+
+        .inner_select button {
+            background-color: black;
+            color: white;
+            margin-left: 60px;
+        }
+
+        .inner_body {
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .inner_body button {
+            position: absolute;
+            right: -75px;
+            border-radius: 10px;
+            width: 70px;
+        }
+
+        .inner_body h4{
+            /* position: absolute;   */
+            /* right: -30px; */
+            /* top: 240px; */
+            margin-top: 20px;
+            background-color: bisque;
+        }
+        .inner_body h3{
+            background-color: bisque;
+        }
+
+        .inner_body img {
+            height: 180px;
+            /* position: absolute; */
+            margin-top: 10px;
+            width: 130px;
+            /* padding-left: 50px; */
+            /* margin-left: 60px; */
+            /* right: 0px; */
+            height: 180px;
+            /* position: absolute; */
+            /* margin-top: 10px; */
+            /* width: 130px; */
+            padding-left: 369px;
+            margin-left: -258px;
+
+        }
+        .inner_right h3{
+/* margin-top: 50px; */
+/* padding-top: 50px; */
+         }
+     .heading1{
+            margin-top: 10px;
+            margin-left: 50px;
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: bold;
+            /* opacity: 0.9    ; */
+            color:white;
+            border-radius: 15px;
+            border: none;
+            background-color: red;
+            opacity: 0.8;
+     }
+        .heading2{
+            margin-top: 50px;
+            margin-left: 50px;
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            background-color: red;
+            border-radius: 15px;
+            opacity: 0.8;
+            /* opacity: 0.9; */
+        }
+        .welcome{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .welcome h3{
+            margin-top: 20px;
+        }
+        .heading1:hover {
+            color:white;
+            background-color: black;
+        } 
+        .heading2:hover {
+            color: white;
+            background-color: black;
+        }
+        .logout{
+            height:30px;
+            width: 130px;
+        margin-top: 10px;
+        margin-left: 50px;
+        font-size: 20px;
+        font-weight: bolder;
+        border-radius: 10px;
+        background-color:red;
+        color: white;
+        border: none;
+        }
+        .logout:hover{
+            color: black;
+            background-color:white;
+        }
+        .outer_back{
+            position: absolute;
+            top: 10px;
+            left: 55px;
+            height: 30px;
+            width:120px ;
+            border-radius: 10px;
+            background-color: black;
+            color:white;
+            font-weight: bolder;
+            font-size: 15px;
+            border: none;
+        }
+        .outer_back:hover{
+            color: white;
+            background-color: red;
+        }
+      
+    </style>
+</head>
+
+<body>
+    
+    <div class="out_border">
+        <button class="outer_back" onclick="back()"> Back</button>
+        
+        <div class="inner_right">
+            <div class="welcome">
+            <h1>HELLO !!
+                
+                <script>
+                    document.write(localStorage.getItem('name'))
+                </script>
+                <h3>Welcome To Word World Library</h3>
+    </h1>
+    
+</div>
+            <span>
+           <!-- <button class="heading2"><h3><a  style="text-decoration: none;"   href="BOOKADD.HTML">Add Book</a></h3></button>  -->
+          <!-- <button class="heading1"><h3 ><a style="text-decoration: none;"  href="showBook.html">List Of Book</a></h3></button>  -->
+            <button class="heading2" onclick="add()">Add Book</button> 
+          <button class="heading1" onclick="list()">List Of Book</button> 
+           <!-- <buttton class="heading2" onclick="add(event)">Add Book</buttton> -->
+            </span>
+        </div>
+        <div class="inner_last">
+<button class="logout" onclick="logout()">Log Out</button>
+        </div>
+        <div class="inner_middle">
+            <span class="inner_heading">
+                <h2>Discover</h2>
+            </span>
+            <span class="inner_select">
+                <select>
+                    <option>Category</option>
+                    <option>Finance</option>
+                    <option>Horror</option>
+                    <option>Future</option>
+                    <option>AI</option>
+                    <option>science</option>
+                </select>
+                <input type="text" name="Search" placeholder="Search Book">
+                <button style="height: 28px; width: 180px; border-radius: 15px;">Search</button>
+            </span>
+            <span class="inner_body">
+                <h3>Book Recommendation</h3>
+                <button>View all ></button>
+                <img src="book2.jpeg">
+                <img src="book5.jpeg">
+                <img src="book8.jpeg">
+                <img src="book1.jpeg">
+                <h4>Book Category</h4>
+            </span>
+
+
+        </div>
+
+        <div class="inner-last1">
+            <div>
+                <img class="inner_book" src="return.jpg">
+                <span class='category_book'>
+                    <img src="book21.jpeg">
+                    <img src="book22.jpeg">
+                    <img src="book10.jpeg">
+                    <img src="book11.jpeg">
+                </span>
+                <span CLASS="inner_bookcategory">
+                    <p>HORROR</p>
+                    <p>UNIVERSE</p>
+                    <p>FUTURE</p>
+                    <p>AI </p>
+                </span>
+            </div>
+            <span>
+                 </span>
+        </div>
+        <div classs="inner_right">
+
+        </div>
+        <script>
+            function add(){
+                // event.preventDefault()
+                window.location.href = "BOOKADD.HTML";
+                        }
+                        function list(){
+                            window.location.href="showBook.html"
+                        }
+                        function back(){
+                            window.location.href="LIB.html"
+                        }
+                        function logout(){
+                            window.replace="LIB.html"
+                        }
+        </script>
+      
+</body>
+
+</html>

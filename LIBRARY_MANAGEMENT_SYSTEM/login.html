@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            /* background-image: url("https://media.istockphoto.com/id/1394111069/photo/adorable-teenager-girl-with-red-curly-hair-wearing-yellow-t-shirt-pointing-to-blank-copy.jpg?s=2048x2048&w=is&k=20&c=gIdvh46J2e9Se2ilVS9PDcsf7DC6WQ8Z67o7ZAXTRA8="); */
+            background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/03/bookshelf-413705_960_720.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        }
+
+
+        .content{
+            height: 400px;
+            width: 280px;
+            border: 2px solid rgb(139, 133, 133,0.5);
+            margin: auto;
+            margin-top: 200px;
+            margin-left: 830px;
+            color:black;
+            border-radius: 15px;
+            /* background-color:rgba(203, 227, 243, 0.5) */
+            /* height: 578px; */
+    background-color: rgba(231, 228, 173, 0.6);
+    /* background-color:rgba(233, 220, 220,); */
+    /* width: 370px; */
+
+    /* margin: auto; */
+    /* margin-top: 50px; */
+    border-radius: 20px;
+    /* border: 2px solid grey; */
+    margin-left: 822px;
+    position: absolute;
+    top: 0px;
+    /* box-shadow: (2px,2px,10px,red); */
+    left:-30px;
+    
+    /* transition: background-color 0.3s ease, transform 0.3s ease; */
+}
+        
+        .con_adjust{
+            margin-left: 40px;
+            /* height: 100px; */
+        }
+        .login{
+            margin-left: 100px;
+            margin-top: 30px;
+        }
+        .submit{
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-left: 40px;
+            font-weight: bolder;
+            width: 120px;
+            height: 30px;
+            font-size: 20px;
+        }
+        .inner_register h4{
+margin-top: 15px;
+        }
+        .inner_register a{
+            text-decoration: none;
+        }
+        .main{
+            font-weight:bold;
+            font-size: 20px;
+        }
+        .inp_inner{
+        margin-top: 8px;
+        line-height: 25px;
+        width: 200px;
+        }
+        input::placeholder{
+            font-size: 20px;
+            padding: 5px;
+        }
+        .inner_photo{
+    height: 575px;
+    /* width: 500px; */
+    position:relative;
+    top: 100px;
+    left: 315px;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+    </style>
+</head>
+<body>
+    <script src="Reglog.js">
+
+    </script>
+     <img  class="inner_photo"  src="https://media.istockphoto.com/id/1394111069/photo/adorable-teenager-girl-with-red-curly-hair-wearing-yellow-t-shirt-pointing-to-blank-copy.jpg?s=2048x2048&w=is&k=20&c=gIdvh46J2e9Se2ilVS9PDcsf7DC6WQ8Z67o7ZAXTRA8=">
+   
+    <form class="content" onsubmit="StuData(event)">
+        <h1 class="login">Login</h1>
+        <div class="con_adjust">
+            <lable class="main" id="login_inner">Email:</lable><br>
+        <input id="email" class="inp_inner" type="email" placeholder="Email" required><br><br>
+        <lable class="password main" >Password:</lable><br>
+       
+       <input id="password" class="inp_inner" type="password" placeholder="Password"><br><br>
+       <input type="submit" class="submit" id="submittion">
+       <span class="inner_register">
+        <h2 >Click here to <a href="register.html">register</a>   </h2>
+       </span>
+    </div>
+    </form>
+
+</body>
+</html>

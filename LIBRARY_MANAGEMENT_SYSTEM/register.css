@@ -1,0 +1,113 @@
+BODY {
+
+    /* background-image: url("https://media.istockphoto.com/id/1394111069/photo/adorable-teenager-girl-with-red-curly-hair-wearing-yellow-t-shirt-pointing-to-blank-copy.jpg?s=2048x2048&w=is&k=20&c=gIdvh46J2e9Se2ilVS9PDcsf7DC6WQ8Z67o7ZAXTRA8="); */
+    background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/03/bookshelf-413705_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+
+    height: 578px;
+    background-color: rgba(231, 228, 173, 0.6);
+    /* background-color:rgba(233, 220, 220,); */
+    width: 370px;
+
+    /* margin: auto; */
+    /* margin-top: 50px; */
+    border-radius: 20px;
+    /* border: 2px solid grey; */
+    margin-left: 822px;
+    position: absolute;
+    top: 60px;
+    /* box-shadow: (2px,2px,10px,red); */
+    left:0 px;
+    
+    /* transition: background-color 0.3s ease, transform 0.3s ease; */
+}
+.inner_photo{
+    height: 575px;
+    /* width: 500px; */
+    position:relative;
+    top: 55px;
+    left: 328px;
+    /* border-radius: 50%px; */
+    opacity: 0.9;
+}
+.para{
+
+    margin-left: 30%;
+    /* font-size: 20px; */
+    font-weight: bolder;
+    /* margin-top: 15%; */
+    
+padding-top: 10px;
+
+}
+
+
+.form {
+    margin-top: 35px;
+    margin-left: 15%;
+    font-size: 25px;
+    font-weight: bolder;
+
+
+}
+
+.form input {
+
+    margin-top: 8px;
+    width:250px ;
+    height: 25px;
+}
+
+
+.radi {
+    margin-left: -115px;
+    font-size: 16px;
+margin-top: -15px;
+    width: 180px;
+}
+
+.but {
+    width: 77%;
+    margin-top: 20px;
+    font-weight: BOLD;
+    font-size: 20px;
+    width: 170px;
+    margin-left: 30px;
+    border-radius: 15px;
+    background-color: bisque;
+}
+
+.ing img {
+
+    height: 30px;
+    width: 30px;
+
+    /* margin-top: -110px; */
+    margin-left: 165px;
+    position: absolute;
+}
+
+.ram {
+    margin-top: -7px;
+    margin-left: 30px;
+    position: absolute;
+}
+.ram p{
+    margin-top: -18px;
+    margin-left: 120px;
+}
+
+.retina {
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    margin-left: 142px;
+    margin-top: 5px;
+}
+input::placeholder{
+    font-size: 16px;
+}

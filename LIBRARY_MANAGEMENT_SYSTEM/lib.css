@@ -1,0 +1,160 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("https://media.istockphoto.com/id/1532459823/photo/modern-living-room-interior-at-night-with-bookshelf-sofa-armchairs-potted-plant-and-air.jpg?s=2048x2048&w=is&k=20&c=tK5cuTs59HtLlRyd-nituxZRzZXUVWJYjkakanSOpno=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 709px; */
+    /* width: 1520px; */
+    color:rgb(10, 8, 8);
+
+}
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color:rgb(227, 192, 161);
+    /* position: fixed; */
+    width: 1528px;
+    position: fixed;
+    border-radius: 5px;
+    
+
+
+}
+input{
+    /* margin-left: 200px; */
+}
+input{
+    width: 300px;
+    height:30px;
+    border: 1px solid grey;
+    /* background-color: grey; */
+    color: black;
+    opacity: 0.4;
+}
+.reg{
+    /* margin-right: -30px; */
+    right: 125px;
+    background-color: rgb(243, 234, 234, 0.6);
+    position: absolute;
+    height: 15px;
+    width: 90px;
+    border-radius: 15px;
+    font-weight: bold;
+/* padding-top: 10px; */
+padding: 10px;
+    text-decoration: none;
+    /* padding-top: 3px; */
+    margin-top: -18px;
+    padding-left: 15px;
+    border: 2px solid black;
+}
+.register:hover  {
+    color:red;
+}
+
+
+.photo img{
+    height: 90px;
+    border-radius: 50%;
+    margin-left: 50px;
+    opacity: 0.6;
+
+}
+.anchors button{
+    list-style-type: none;
+}
+
+.log{
+    /* margin-right: 15px; */
+    right: 25px;
+    background-color: rgb(243, 234, 234, 0.6);
+    /* color: grey; */
+    height: 35px;
+    width: 90px;
+    position: relative;
+    border-radius: 13px;
+    font-weight: bold;
+    /* list-style-type: none; */
+    text-decoration: none;
+    padding-top: 1px;
+    padding-left : 25px;
+
+}
+.about{
+    margin-right: 70px;
+    /* right: 150px; */
+    /* position: absolute; */
+}
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+} */
+
+.word-container {
+    /* display: flex; */
+    gap: 10px;
+    position: relative;
+    top: 200px;
+    left: 550px;
+    color:blanchedalmond;
+    background-color:rgb(235, 217, 217,0.3);
+    height: 300px;
+    border-radius: 20px;
+    width: 420px;
+    padding: 20px   ;
+    /* background-image: url("images\ \(1\).jpeg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+.inner_image {
+        margin-top: 100px;
+        margin-left: 150px;
+        border-radius: 15px;
+        width: 110px;
+        background-color: bisque;
+        height: 35px;
+        font-size: 20px;
+        font-weight: bolder;
+        /* text-decoration: none; */
+}
+a{
+    text-decoration: none;
+}
+
+.word {
+    opacity: 0;
+    font-size: 2rem;
+    animation: fadeIn 0.2s forwards;
+}
+
+.word:nth-child(1) {
+    animation-delay: 0.8s;
+}
+.word:nth-child(2) {
+    animation-delay: 1s;
+}
+.word:nth-child(3) {
+    animation-delay: 1.2s;
+}
+.word:nth-child(4) {
+    animation-delay: 1.3s;
+}
+.word:nth-child(5) {
+    animation-delay: 1.4s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body{
+            
+        background-image: url("https://cdn.pixabay.com/photo/2020/05/25/17/54/library-5219747_1280.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+        
+        .data {
+            border: 2px solid black;
+            
+        }
+        .tableDataa{
+            /* height: 50px; */
+            width: px;
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 115px;
+            margin-top: 220px;
+        }
+        #formss{
+            border: 5px solid black;
+            height: 450px;
+            width: 450px;
+            background-color: bisque;
+                   
+        /* background-image: url("https://cdn.pixabay.com/photo/2020/05/25/17/54/library-5219747_1280.jpg"); */
+        }
+        input{
+            height: 30px ;
+            width: 250px;
+            font-size: 15px;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #sub{
+            height:30px;
+            width: 100px;
+            background-color: grey;
+            border-radius: 15px;
+        }
+        #upcan{
+            height: 30px;
+            width: 100px;
+            background-color: grey;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <form>
+
+        <legend>update</legend>
+        <table border="2"  id="main_table"  class="tableDataa" style="background-color: rgb(198,175,131);">
+            <thead>
+                <tr class="data">
+                    <th>S No.</th>
+                    <th>Username</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody id="myTabData"></tbody>
+        </table>
+    </form>
+    
+    </fieldset>
+
+    <center>
+
+        <form id="formss" style="display: none;"  onsubmit="UpdateData(event)">
+            <h1>updata data</h1>
+
+            <label>Username</label><br>
+            <input type="text" placeholder="username" id="upduser"><br>
+            <label>Book Name</label><br>
+            <input type="text" placeholder="Book Name" id="updbookname"><br>
+            <label>Author</label><br>
+            <input type="text" placeholder="Author" id="updauthor"> <br><br>
+            <label>Date</label><br>
+            <input type="text" placeholder="Date" id="upddate"><br><br>
+
+            <input type="submit" id="sub">
+            <button id="upcan" onclick="closeForm(event) ">Cancel</button>
+        </form>
+    </center>
+
+
+
+    <script>
+        // function stuData() {
+        //     // event.preventDefault()
+        //     // debugger
+        //     let apnid = document.getElementById('myId').value
+        //     let apncat = document.getElementById('myCat').value
+        //     let apnexp = document.getElementById('myExp').value
+        //     // let apnid=document.getElementById('myId').value
+        //     let finData = {
+        //         'iduni': apnid,
+        //         'category': apncat,
+        //         'expense': apnexp
+        //     }
+
+            // let data = JSON.parse(localStorage.getItem('myNewKey')) ? JSON.parse(localStorage.getItem('myNewKey')) : []
+
+            // if (apnid == '' || apncat == '' || apnexp == '') {
+            //     alert("All input field are necessary to fill")
+            //     return;
+
+            // }
+        //     data.push(finData)
+
+        //     localStorage.setItem('myNewKey', JSON.stringify(data))
+
+
+        //     {
+        //         alert("submit sucessfully")
+        //         Showdata();
+
+        //     }
+
+        // }
+        
+
+        function Showdata() {
+            // event.preventDefault()
+            debugger
+            let data = JSON.parse(localStorage.getItem('mylib'))
+            let tabdata = document.getElementById('myTabData');
+
+            let printData = data.map((value, index) => {
+                return `
+            <tr>
+             
+             <td>${index + 1}</td>
+            <td> ${value.username} </td>
+            <td> ${value.bookname} </td>
+            <td> ${value.bookauthor} </td>
+            <td> ${value.bookdate} </td>
+           <td> 
+                        <button onclick="openeForm('${value.username}')" style= "font-size:15px;width:70px:font-weight:bolder">Edit</button>
+                        <button onclick="deleteData('${value.username}')"style= "font-size:15px;width:70px:font-weight:bolder">Delete</button>
+           
+            </td>
+            </tr>
+            
+            `
+            })
+            tabdata.innerHTML = printData.join('')
+            
+        }
+       Showdata();
+        
+
+       
+
+        function deleteData(username) {
+            // debugger
+            let data = JSON.parse(localStorage.getItem('mylib'))
+            let myid = data.findIndex((item) => {
+                return item.username === username
+            })
+            data.splice(myid, 1)
+            localStorage.setItem('mylib', JSON.stringify(data))
+            // stuData(); 
+            Showdata();
+        }
+
+        function openeForm(username) {
+            let maintable=document.getElementById('main_table')
+            maintable.style.display="none"
+            debugger
+            let data = JSON.parse(localStorage.getItem('mylib'));
+            let findData = data.find((value) => {
+                return value.username == username
+            })
+
+            if (findData) {
+                document.getElementById('upduser').value = findData.username;
+                document.getElementById('updbookname').value = findData.bookname;
+                document.getElementById('updauthor').value = findData.bookauthor;
+                document.getElementById('upddate').value = findData.bookdate;
+                document.getElementById('upduser').disabled = true;
+            }
+
+            let edits = document.getElementById('formss');
+            edits.style.display = 'block'
+            Showdata()
+        }
+
+
+        function closeForm() {
+            let edit = document.getElementById('formss');
+            edit.style.display = 'none'
+        }
+
+        function UpdateData(event) {
+            debugger
+            event.preventDefault()
+            let username = document.getElementById('upduser').value;
+            let bookname = document.getElementById('updbookname').value;
+            let bookauthor = document.getElementById('updauthor').value;
+            let bookdate = document.getElementById('upddate').value;
+
+            let data = JSON.parse(localStorage.getItem('mylib'))
+            let myid = data.findIndex((item) => {
+                return item.username === username
+            })
+            data[myid] = { username, bookname, bookauthor,bookdate }
+
+            localStorage.setItem('mylib', JSON.stringify(data))
+            Showdata();
+        }
+
+    </script>
+</body>
+
+</html>
